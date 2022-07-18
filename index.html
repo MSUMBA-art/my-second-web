@@ -5,61 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Responsive HTML,CSS, JS Portfolio Page</title>
+    <title>Document</title>
+    <!-- ============== FONT AWESOME CDN============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
-    <!-- material icon CDN -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
-
-    <!-- ===========ICONSCOUT CDN ============= -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- ===================TYPING SCRIPT CDN LINK================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
 
 
-    <!-- stylesheet linked -->
-    <link rel="stylesheet" href="./styles.css">
+
+    <!-- ==============CUSTOM STYLE CSS LINK============== -->
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-
-    <!-- nav link start -->
-
+    <!-- =============nav section start here========  -->
     <nav>
-        <div class="container">
-            <a href="#">
-                <h3>LOGO</h3>
+        <div class="container nav-container">
+            <a href="index.html">
+                <h4><span>ALEX</span>ANDER</h4>
             </a>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#home">Services</a></li>
+                <li><a href="#home">Skills</a></li>
+                <li><a href="#home">Portfolio</a></li>
+                <li><a href="#home">Courses</a></li>
+                <li><a href="#home">Let's Talk</a></li>
             </ul>
-            <button><span class="material-symbols-sharp">
-                    menu
-                </span></button>
-            <button><span class="material-symbols-sharp">
-                    close
-                </span></button>
+            <button id="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button id="open-menu-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </nav>
-    <!-- ========Nav link end========== -->
+    <!-- =============nav section end========  -->
 
-    <section class="landing-page">
-        <div class="container">
-            <div class="socials">
-                <a href="https://linkedin.com/" target="_blank"><i class="uil uil-linkedin"></i></a>
-                <a href="https://github.com/" target="_blank"><i class="uil uil-github"></i></i></a>
-                <a href="http://instagram" target="_blank"><i class="uil uil-instagram-alt"></i></a>
+    <!-- =============header section start here========  -->
+    <header>
+        <div class="container header-container" id="home">
+            <div class="header-left">
+                <div class="header-left-img">
+                    <img src="/images/images/feed-1.jpg" alt="Profile">
+                </div>
             </div>
+            <div class="header-right">
+                <div class="text-1">Hello, this is</div>
+                <div class="text-2">Alexander Msumba</div>
+                <div class="text-3">And I'm a <span class="typing"></span></div>
+                <button class="btn"><a href="https://linkedin.com/Alex" target="_blank">Hire Me</a></button>
+            </div>
+        </div>
+    </header>
+    <!-- =============nav section end here========  -->
 
-            <div class="info"></div>
-
-            <div class="profile-area"></div>
-
+    <!--=============About me section start here======== -->
+    <section class="about" id="about">
+        <h2 class="border-bottom">About Me</h2>
+        <div class="container about-container">
+            <div class="about-img">
+                <img src="/images/images/feed-3.jpg" alt="about logo">
+            </div>
+            <div class="about-text">
+                <div class="text">
+                    I am Alexander and I'm a <span class="typing-2"></span>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur culpa, esse rerum deserunt iste
+                    laboriosam ullam reprehenderit a repellat dolore. Voluptatem eum adipisci cupiditate quasi quis
+                    deleniti, explicabo quos tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    doloribus ipsa, ab dolor harum vitae ut veritatis dolorem aliquid ullam blanditiis.</p>
+                <button class="btn"><a href="">Download CV</a></button>
+            </div>
         </div>
     </section>
+    <!--=============About me section end here======== -->
 
+     <!--=============My Services  section start here======== -->
+
+      <!--=============My Services  section end here======== -->
+
+
+
+
+
+    <!-- ==============CUSTOM JAVASCRIPT LINK============== -->
+    <script src="./main.js"></script>
 </body>
 
 </html>
