@@ -272,6 +272,7 @@ header::before {
 
 .about-container .about-text p {
   margin-bottom: 0.8rem;
+  text-transform: none;
 }
 
 .about-container .about-text .text {
@@ -282,3 +283,267 @@ header::before {
 .about-container .about-text .text span {
   color: var(--primary);
 }
+
+/* ==============SERVICES============== */
+.services {
+  text-align: center;
+  margin-top: -5rem;
+}
+
+.services-container .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.services-container .cards .card {
+  background-color: var(--primary);
+  padding: 1.5rem 1rem;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.s-box i {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  color: var(--bg);
+  border: 1px solid rgb(0, 0, 0, 7.6);
+  border-radius: 50%;
+  padding: 14px;
+  transition: all 1s;
+}
+
+.s-box h3 {
+  font-style: 1.2rem;
+  color: var(--bg);
+}
+
+.s-box p {
+  margin: 1.2rem 0;
+  color: var(--bg);
+}
+
+.s-box a {
+  color: var(--normal);
+  font-size: 1.2rem;
+  font-weight: 450;
+  padding: 0.3rem 1rem;
+  background-color: var(--bg);
+  border-radius: 1rem;
+}
+
+.s-box a:hover {
+  background-color: var(--normal);
+  color: var(--bg);
+  border-radius: 1px solid var(--bg);
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+.services-container .cards .card:hover .s-box i {
+  background: var(--bg);
+  color: var(--normal);
+}
+
+.services-container .cards .card::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--normal);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.services-container .cards .card:hover::after {
+  transform: rotate(13deg);
+}
+
+/* ============my skills ========== */
+.skills .new {
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  margin: auto;
+  position: relative;
+  flex-direction: column;
+  padding: 1.6rem 1.8rem;
+  max-width: 40rem;
+  background-color: var(--black);
+  border-radius: 0.7rem;
+  box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.skills-container .bar {
+  margin: 1.2rem 0;
+}
+
+.skills-container .bar:first-child {
+  margin-top: 0rem;
+}
+
+.skills-container .bar .info {
+  margin-bottom: 0.3rem;
+}
+
+.skills-container  .bar .info span {
+  font-weight: 500;
+  /* background-color: red; */
+  font-size: 1rem;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+
+.skills-container .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background-color: var(--normal);
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 0.7rem;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5),0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 0.7rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--primary);
+  animation: animate 1s 3s cubic-bezier(1,0,0.5,1)forwards;
+}
+
+.bar .progress-line.html span {
+  width: 97%;
+  
+}
+.bar .progress-line.css span {
+  width: 90%;
+  
+}
+.bar .progress-line.javascript span {
+  width: 79%;
+  
+}
+.bar .progress-line.reactjs span {
+  width: 89%;
+  
+}
+.bar .progress-line.nodejs span {
+  width: 80%;
+  
+}
+.bar .progress-line.postgresql span {
+  width: 80%;
+}
+
+.bar .progress-line.mysql span {
+  width: 80%;
+  
+}
+.bar .progress-line.mongodb span {
+  width: 90%;
+}
+.bar .progress-line.git span {
+  width: 90%;
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -0.7rem;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 0.5rem solid transparent;
+  border-bottom-width: 0rem;
+  border-right-width: 0rem;
+  border-top-color: var(--bg);
+  opacity: 0;
+  animation: showText2 0.5s 1s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -1.8rem;
+  font-weight: 800;
+  background-color: #000;
+  color: #ffffff;
+  padding: 1px 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 0.2rem;
+  opacity: 0;
+  animation: showText2 0.5s 1s linear forwards;
+}
+
+@keyframes showText2{
+  100%{
+    opacity: 1;
+  }
+}
+
+.progress-line.html span::after {
+content: "97%";
+}
+
+.progress-line.css span::after {
+content: "90%";
+}
+
+.progress-line.html  .css span::after {
+content: "80%";
+}
+
+.progress-line.javascript span::after {
+content: "79%";
+}
+
+.progress-line.reactjs span::after {
+content: "89%";
+}
+.progress-line.nodejs span::after {
+content: "89%";
+}
+.progress-line.postgresql span::after {
+content: "80%";
+}
+
+.progress-line.mysql span::after {
+content: "80%";
+}
+
+.progress-line.mongodb span::after {
+content: "90%";
+}
+
+.progress-line.git span::after {
+content: "90%";
+}
+
+
+
+
